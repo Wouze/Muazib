@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-arabic: "IBM Plex Sans Arabic", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-sand-50: #fcf8f2;
+  --color-sand-100: #f6eee2;
+  --color-sand-200: #ebddc8;
+  --color-sand-300: #dcc6a6;
+  --color-sand-400: #c4a57c;
+
+  --color-date-400: #a08670;
+  --color-date-500: #85694f;
+  --color-date-600: #6b513b;
+  --color-date-700: #523c2b;
+  --color-date-800: #3a2a1e;
+  --color-date-900: #251a12;
+
+  --color-saffron-50: #fff7e8;
+  --color-saffron-100: #fdebc8;
+  --color-saffron-200: #f8d692;
+  --color-saffron-500: #d9951e;
+  --color-saffron-600: #b97a10;
+  --color-saffron-700: #925f0d;
+
+  --color-palm-50: #eff6f1;
+  --color-palm-100: #d9ebdf;
+  --color-palm-200: #b5d6c0;
+  --color-palm-500: #3f8a63;
+  --color-palm-600: #2f6f4e;
+  --color-palm-700: #24573d;
+
+  --color-terracotta-50: #fcf0ec;
+  --color-terracotta-100: #f8ddd4;
+  --color-terracotta-200: #efbbaa;
+  --color-terracotta-500: #c55a3e;
+  --color-terracotta-600: #a8452d;
+  --color-terracotta-700: #873622;
+
+  --color-plum-50: #f5f0fa;
+  --color-plum-100: #e9dff3;
+  --color-plum-200: #d3c0e6;
+  --color-plum-500: #8160a8;
+  --color-plum-600: #6a4c8f;
+  --color-plum-700: #543b72;
+}
+
+/* Sadu weave band (traditional Najdi Bedouin textile pattern) */
+.sadu-band {
+  height: 6px;
+  background:
+    linear-gradient(135deg, var(--color-terracotta-600) 25%, transparent 25%) -6px 0 / 12px 12px,
+    linear-gradient(225deg, var(--color-terracotta-600) 25%, transparent 25%) -6px 0 / 12px 12px,
+    linear-gradient(315deg, var(--color-saffron-500) 25%, transparent 25%) 0 0 / 12px 12px,
+    linear-gradient(45deg, var(--color-saffron-500) 25%, transparent 25%) 0 0 / 12px 12px,
+    var(--color-date-900);
+}
+
+.dot-texture {
+  background-image: radial-gradient(var(--color-sand-200) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand-300);
+  border-radius: 999px;
+  border: 2px solid var(--color-sand-50);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sand-400);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes msg-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.msg-in {
+  animation: msg-in 0.28s ease-out both;
+}
+
+@keyframes fresh-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(217, 149, 30, 0.55);
+    background-color: var(--color-saffron-50);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(217, 149, 30, 0);
+    background-color: #fff;
+  }
+}
+.fresh-glow {
+  animation: fresh-glow 1.6s ease-out 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .msg-in,
+  .fresh-glow {
+    animation: none;
+  }
+}

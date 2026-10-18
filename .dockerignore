@@ -1,0 +1,13 @@
+.venv
+venv
+__pycache__
+*.pyc
+*.db
+.env
+.git
+.pytest_cache
+frontend/node_modules
+frontend/dist
+AI_Engineer_Take_Home_Assignment.pdf
+CLAUDE.md
+/menu.json

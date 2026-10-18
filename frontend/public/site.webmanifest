@@ -1,0 +1,24 @@
+{
+  "name": "Mu'azib — Dar Najd Kitchen",
+  "short_name": "Mu'azib",
+  "description": "The AI host of Dar Najd Kitchen. It remembers every guest.",
+  "start_url": "/",
+  "id": "/",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#fcf8f2",
+  "background_color": "#fcf8f2",
+  "display": "standalone"
+}
